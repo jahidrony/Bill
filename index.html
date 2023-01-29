@@ -8,79 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        body,html{
-            background: #ededf0;
-            width: 100%;
-            font-size: 10px;
-            height: 100vh;
-        }
-        .tr-shadow{
-            background-color: #ddd;
-        }
-        li{
-            list-style-type: none;
-        }
-        .container{
-            max-width: calc(960px - 80px);
-            margin: 0px auto;
-            padding: 10rem 7rem 6rem 2rem;
-            background: white;
-        }
-        .wrapper{
-            border-top: 1.5rem solid orangered;
-            border-bottom: 1.5rem solid orangered;
-            min-height: 90vh;
-        }
-        .invoice-info{
-            display: flex;
-            justify-content: space-between;
-            background: #ededf0;
-            min-height: 15rem;
-            font-size: 1.6rem;
-            align-items: center;
-        }
-        .invoice-info > div:nth-child(1){
-          
-        }
+    <link href="assets/css/style.css" rel="stylesheet">
 
-        .invoice-info > div:nth-child(2){
-            text-align: end;
-            display: inline;
-        }
-        @media print {
-            .container{
-            max-width: calc(960px - 80px);
-            margin: 0px auto;
-            padding: 0  2rem;
-            background: white;
-        }
-    .invoice-info{
-            display: flex;
-            justify-content: space-between;
-            background-color: #ededf0!important;
-        print-color-adjust: exact; 
-        -webkit-print-color-adjust: exact;
-            min-height: 10rem;
-            font-size: 1.6rem;
-            align-items: center;
-        }
-        .table-title{
-            background: orangered;color: white;padding:1rem .5rem;font-size: 1.8rem;
-            print-color-adjust: exact; 
-        -webkit-print-color-adjust: exact;
-        }
-        .tr-shadow{
-            background-color: #ddd;
-            print-color-adjust: exact; 
-        -webkit-print-color-adjust: exact;
-        }
-       
-}
+    <style>
+        
     </style>
 </head>
 <body>
@@ -267,17 +198,5 @@ border: 0;
 bottom: 0;position: fixed;">
     <button type="button" style="padding: .5rem 1rem;color:whitesmoke;outline: none;border: transparent; background: orangered;font-size: 1.5rem;;justify-content: end;border-radius: .5rem;" onclick="printContent()">Print</button>
 </div>
-    <script>
-        const printContent = () => {
-            var printContents = document.getElementById("printerContent").innerHTML;
-            var originalContents = document.body.innerHTML;
-
-            document.body.innerHTML = printContents;
-
-            window.print();
-
-            document.body.innerHTML = originalContents;
-        }
-    </script>
-</body>
+    <script src="assets/js/app.js"> </script>
 </html>

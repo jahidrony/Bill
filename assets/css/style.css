@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    background: #ededf0;
+    width: 100%;
+    font-size: 10px;
+    height: 100vh;
+}
+.tr-shadow{
+    background-color: #ddd;
+}
+li{
+    list-style-type: none;
+}
+.container{
+    max-width: calc(960px - 80px);
+    margin: 0px auto;
+    padding: 10rem 7rem 6rem 2rem;
+    background: white;
+}
+.wrapper{
+    border-top: 1.5rem solid orangered;
+    border-bottom: 1.5rem solid orangered;
+    min-height: 90vh;
+}
+.invoice-info{
+    display: flex;
+    justify-content: space-between;
+    background: #ededf0;
+    min-height: 15rem;
+    font-size: 1.6rem;
+    align-items: center;
+}
+.invoice-info > div:nth-child(1){
+  
+}
+
+.invoice-info > div:nth-child(2){
+    text-align: end;
+    display: inline;
+}
+@media print {
+    .container{
+    max-width: calc(960px - 80px);
+    margin: 0px auto;
+    padding: 0  2rem;
+    background: white;
+}
+.invoice-info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ededf0!important;
+print-color-adjust: exact; 
+-webkit-print-color-adjust: exact;
+    min-height: 10rem;
+    font-size: 1.6rem;
+    align-items: center;
+}
+.table-title{
+    background: orangered;color: white;padding:1rem .5rem;font-size: 1.8rem;
+    print-color-adjust: exact; 
+-webkit-print-color-adjust: exact;
+}
+.tr-shadow{
+    background-color: #ddd;
+    print-color-adjust: exact; 
+-webkit-print-color-adjust: exact;
+}
+
+}
